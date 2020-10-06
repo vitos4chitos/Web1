@@ -67,3 +67,11 @@ function reset() {
         .then(res => res.text()).then(table => document.querySelector("#answers").innerHTML = table);
     event.preventDefault();
 }
+function upload() {
+    fetch("../Server/Upload.php",{
+        method: "POST",
+        body: null,
+    })
+        .then(res => res.text()).then(table => document.querySelector("#answers").innerHTML = table);
+
+}
